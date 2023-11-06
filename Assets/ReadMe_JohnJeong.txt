@@ -1,6 +1,6 @@
 ################################################
-# Project   - 
-# Your Name - 
+# Project   - Classic Game Project
+# Your Name - John Jeong
 # Date      - 
 ################################################
 
@@ -16,7 +16,11 @@ ___What creative additions did you make? How can we find them?___
 
 ___Any assets used that you didn't create yourself? (art, music, etc. Just tell us where you got it, link it here)___
 
+Sprites and Images:
+https://github.com/canderson770/Duck-Hunt
 
+Background Music:
+https://downloads.khinsider.com/game-soundtracks/album/duck-hunt
 
 
 ___Did you receive help from anyone outside this class? (list their names and what they helped with)___

@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3478616541
+    locked: 0
+  - name: Duck
+    uniqueID: 3017658003
+    locked: 0
+  - name: Dog
+    uniqueID: 1087531257
+    locked: 0
+  - name: GUI
+    uniqueID: 1262389523
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
