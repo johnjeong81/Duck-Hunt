@@ -113,10 +113,10 @@ public class DuckShooter : MonoBehaviour
         score += 100;
         UpdateScoreText();
         duckSpawner.DuckShot();
-        if (score == 1000)
+        /**if (score == 1000)
         {
             GoToNextLevel();
-        }
+        }**/
     }
 
     void UpdateScoreText()
@@ -151,10 +151,10 @@ public class DuckShooter : MonoBehaviour
         AudioSource.PlayClipAtPoint(gameOverSound, Camera.main.transform.position, volume);
     }
 
-    void GoToNextLevel()
+    /**void GoToNextLevel()
     {
         Debug.Log("Congratulations! Going to the next level!");
-    }
+    }**/
 }
 
 
