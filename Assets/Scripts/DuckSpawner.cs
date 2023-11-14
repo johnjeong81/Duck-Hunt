@@ -6,6 +6,7 @@ public class DuckSpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject duckPrefab;
+    public GameObject fastduckPrefab;
     public float spawnInterval = 3.0f;
     public AudioClip spawnSound;
 
@@ -24,7 +25,8 @@ public class DuckSpawner : MonoBehaviour
         if (canSpawn && ducksOnScreen < 1)
         {
             Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-            GameObject duckInstance = Instantiate(duckPrefab, randomSpawnPoint.position, Quaternion.identity);
+            GameObject duckPrefabToSpawn = Random.Range(0, 10) < 8 ? duckPrefab : fastduckPrefab;
+            GameObject duckInstance = Instantiate(duckPrefabToSpawn, randomSpawnPoint.position, Quaternion.identity);
             ducksOnScreen++;
 
             if (spawnSound != null && audioSource != null)

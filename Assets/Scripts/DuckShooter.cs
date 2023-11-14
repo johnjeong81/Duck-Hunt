@@ -65,6 +65,10 @@ public class DuckShooter : MonoBehaviour
                 {
                     ShotDuck(hit.collider.gameObject);
                 }
+                else if (hit.collider.CompareTag("FastDuck"))
+                {
+                    ShotDuck(hit.collider.gameObject);
+                }
             }
             else
             {
@@ -110,7 +114,14 @@ public class DuckShooter : MonoBehaviour
     void ShotDuck(GameObject duck)
     {
         Destroy(duck);
-        score += 100;
+        if (duck.CompareTag("Duck"))
+        {
+            score += 100;
+        }
+        else if (duck.CompareTag("FastDuck"))
+        {
+            score += 200;
+        }
         UpdateScoreText();
         duckSpawner.DuckShot();
         /**if (score == 1000)
@@ -141,6 +152,13 @@ public class DuckShooter : MonoBehaviour
         {
             Destroy(duck.gameObject);
         }
+
+        FastDuckController[] remainingFastDucks = FindObjectsOfType<FastDuckController>();
+        foreach (FastDuckController fastDuck in remainingFastDucks)
+        {
+            Destroy(fastDuck.gameObject);
+        }
+
         duckSpawner.StopSpawning();
         PlayGameOverSound();
     }

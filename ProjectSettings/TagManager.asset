@@ -12,6 +12,7 @@ TagManager:
   - Boundary
   - Background
   - BoundaryNew
+  - FastDuck
   layers:
   - Default
   - TransparentFX
